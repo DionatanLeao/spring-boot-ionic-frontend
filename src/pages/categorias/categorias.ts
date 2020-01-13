@@ -4,7 +4,6 @@ import { CategoriaService } from '../../services/domain/categoria.service';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { CategoriaDTO } from '../../models/categoria.dto';
 
-type NewType = CategoriaDTO[];
 
 /**
  * Generated class for the CategoriasPage page.
@@ -20,7 +19,7 @@ type NewType = CategoriaDTO[];
 })
 export class CategoriasPage {
 
-  items: NewType;
+  items: CategoriaDTO[];
 
   constructor(
     public navCtrl: NavController, 
@@ -33,9 +32,7 @@ export class CategoriasPage {
     .subscribe(response => {
      this.items = response;
     },
-    error => {
-      console.log(error);
-    });
+    error => {});
   }
 
 }
