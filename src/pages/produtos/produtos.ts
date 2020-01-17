@@ -29,6 +29,10 @@ export class ProdutosPage {
    error => {});
   }
 
+  showDetail() {
+    this.navCtrl.push('ProdutoDetailPage')
+  }
+
   //loadImageUrls() {
   //  for(var i=0; i<this.items.length; i++) {
   //    let item = this.items[i];
