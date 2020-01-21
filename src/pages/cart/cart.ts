@@ -45,6 +45,10 @@ export class CartPage {
     this.navCtrl.setRoot('CategoriasPage');
   }
 
+  checkout() {
+      this.navCtrl.push('PickAddressPage');
+  }
+
   //loadImageUrls() {
   //  for(var i=0; i<this.items.length; i++) {
   //    let item = this.items[i];
